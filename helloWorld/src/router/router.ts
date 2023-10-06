@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express'
+import { index } from '../controllers/main'
 import { engine } from 'express-handlebars'
 import { loremIpsum } from 'lorem-ipsum'
 
@@ -11,9 +12,7 @@ router.get('/lorem/:paragrafos', (req: Request, res: Response) => {
 	}))
 })
 
-router.get('/', (req: Request, res: Response) => {
-	res.end('Início')	
-})
+router.get('/', index) 
 
 router.get('/about', (req: Request, res: Response) => {
 	res.send('Sobre')
@@ -22,8 +21,7 @@ router.get('/about', (req: Request, res: Response) => {
 
 router.get('/hb1', (req: Request, res: Response) => {
 	res.render('hb1', {
-		mensagem: 'Olá, você está aprendendo Express + HBS!',
-		layout: false,
+		mensagem: 'Olá, você está aprendendo Express + HBS!'
 	})
 })
 
