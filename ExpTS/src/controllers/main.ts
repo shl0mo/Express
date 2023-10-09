@@ -27,19 +27,16 @@ export const bemvindo = (req : Request, res : Response) => {
 }
 
 export const hb1 = (req : Request, res : Response) => {
-	res.render('hb1', {
-		mensagem: 'Olá, você está aprendendo Express + HBS!',
-		layout: false
+	res.render('main/hb1', {
+		mensagem: 'Olá, você está aprendendo Express + HBS!'
 	})
 }
 
 export const hb2 = (req : Request, res: Response) => {
-	console.log('hb2')
-	res.render('hb2', {
+	res.render('main/hb2', {
 		nome: 'React',
 		tipo: 'library',
-		poweredByNodejs: true,
-		layout: false
+		poweredByNodejs: true
 	})
 }
 
@@ -50,7 +47,7 @@ export const hb3 = (req : Request, res : Response) => {
 		{ nome: 'Edleno Moura', sala: 1236 },
 		{ nome: 'Elaine Harada', sala: 1232 }
 	]
-	res.render('hb3', { profes, layout: false })
+	res.render('main/hb3', { profes })
 }
 
 export const hb4 = (req : Request, res : Response) => {
@@ -63,5 +60,5 @@ export const hb4 = (req : Request, res : Response) => {
 		{  name: 'Docker', type: 'Virtualization', poweredByNodejs: false },
 		{  name: 'Sequelize', type: 'ORM toll', poweredByNodejs: true },
 	]
-	res.render('hb4', { technologies, layout: false })
+	res.render('main/hb4', { technologies })
 }

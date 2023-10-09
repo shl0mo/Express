@@ -11,9 +11,8 @@ validateEnv()
 const app = express()
 const PORT = process.env.PORT || 3333
 
-// console.log(`${__dirname}/helpers/helpers.ts`)
-
 app.engine('handlebars', engine({
+	layoutsDir: `${__dirname}/views/layouts`,
 	helpers: require(`${__dirname}/helpers/helpers.ts`)
 }))
 app.set('view engine', 'handlebars')
