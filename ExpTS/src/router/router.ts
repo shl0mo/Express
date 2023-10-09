@@ -29,10 +29,10 @@ router.get('/about', (req: Request, res: Response) => {
 	res.send('Sobre')
 })
 
-
 router.get('/hb1', (req: Request, res: Response) => {
 	res.render('hb1', {
-		mensagem: 'Olá, você está aprendendo Express + HBS!'
+		mensagem: 'Olá, você está aprendendo Express + HBS!',
+		layout: false
 	})
 })
 
@@ -52,7 +52,7 @@ router.get('/hb3', (req: Request, res: Response) => {
 		{ nome: 'Edleno Moura', sala: 1236 },
 		{ nome: 'Elaine Harada', sala: 1232 }
 	]
-	res.render('hb/hb3', { profes, layout: false })
+	res.render('hb3', { profes, layout: false })
 })
 
 router.get('/hb4', (req: Request, res: Response) => {
