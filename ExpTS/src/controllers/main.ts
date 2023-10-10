@@ -22,6 +22,10 @@ export const lorem = (req : Request, res :  Response) => {
 	)
 }
 
+export const ui = (req : Request, res : Response) => {
+	res.render('main/ui')
+}
+
 export const bemvindo = (req : Request, res : Response) => {
 	res.end('Bem vindo')
 }
